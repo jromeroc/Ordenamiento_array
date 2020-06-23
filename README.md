@@ -5,7 +5,7 @@ Dada una lista de números retornar la misma lista pero ordenada de menor a mayo
 ### Requisitos 🔧
 - [Python **3.8**](https://www.python.org/downloads/)
 
-####Ejecución del script
+#### Ejecución del script
 'python order_list.py'
 
 
