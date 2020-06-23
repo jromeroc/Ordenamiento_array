@@ -1,28 +1,29 @@
 #/usr/bin/env python
 
 def order_list(lista):
-    # posición del ultimo elemento
+    print("-"*30)
+    print("Lista original: ", lista)
+    print("-"*30)
+
+    # Cantidad de indices en la lista
     l = len(lista)-1
 
-    # Recorrido a los elemntos de la lista no ordenados
+    # Recorrido a los elementos de la lista no ordenados
     while l > 0:
         last_pos = 0
         
-        for i in range(1, l+1):
-            if lista[i] > l:
+        for i in range(0, l+1):
+            if lista[i] > lista[last_pos]:
                 last_pos = i
 
-        p = last_pos
-
         # intercambia los valores en las posiciones
-        lista[p], lista[l] = lista[l], lista[p]
-
-        print ("Lista ordenada parcial: ", lista)
+        lista[last_pos], lista[l] = lista[l], lista[last_pos]
 
         # Cambia el tamaño de la lista a ordenar
         l = l-1
 
     return lista
 
-elements = [9, 5, 3, 8, 6, 7, 34, 0, -3, 90]
+elements = [100, 9, 5, 3, 8, 6, 7, 34, 0, 90,-3, 90,-6]
 print ("Lista ordenada ", order_list(elements))
+print("-"*30)
